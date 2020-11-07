@@ -1,6 +1,7 @@
 <template>
 	<view class="content">
 		<navbar></navbar>
+		<tab :list="tabList"></tab>
 	</view>
 </template>
 
@@ -14,14 +15,24 @@
 		},
 		data() {
 			return {
-				title: 'Hello'
+				title: 'Hello',
+				tabList:[]
 			}
 		},
 		onLoad() {
-
+			this.getLabel()
 		},
 		methods: {
-
+			getLabel(){
+				// 获取云函数的方法
+				uniCloud.callFunction({
+					name:'get_tabel',
+				}).then((res)=>{
+					const{result}=res
+					this.tabList=result.data
+					console.log(this.tabList)
+				})
+			}
 		}
 	}
 </script>

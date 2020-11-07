@@ -5,6 +5,7 @@
 			"style": {
 				// 自定义导航栏
 				"navigationStyle":"custom",
+				"navigationBarTextStyle":"white",
 				
 				"navigationBarTitleText": "uni-app"
 			}

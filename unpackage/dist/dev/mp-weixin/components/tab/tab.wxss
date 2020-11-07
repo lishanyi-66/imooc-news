@@ -1341,15 +1341,49 @@
 .icon-radioboxfill:before {
   content: "\e763";
 }
-.navbar .navbar-fixed {
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 99;
-  background-color: #f07373;
+.tab {
+  height: 45px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  background-color: #fff;
+  border-bottom: 1px solid #ccc;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100vw;
 }
-.navbar .navbar-fixed .navbar-content {
+.tab .tab-scoll {
+  -webkit-box-flex: 7;
+  -webkit-flex: 7;
+          flex: 7;
+  overflow: hidden;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.tab .tab-scoll .tab-scoll_box {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  height: 45px;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  -webkit-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+}
+.tab .tab-scoll .tab-scoll_box .tab-scoll_item {
+  -webkit-flex-shrink: 0;
+          flex-shrink: 0;
+  padding: 0 10px;
+}
+.tab .tab-gear {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+          flex: 1;
+  height: 45px;
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
@@ -1359,30 +1393,15 @@
   -webkit-box-pack: center;
   -webkit-justify-content: center;
           justify-content: center;
-  padding: 0 15px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  position: relative;
 }
-.navbar .navbar-fixed .navbar-content .navbar-search {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-          align-items: center;
-  padding: 0 10px;
-  width: 100%;
-  height: 32px;
-  -webkit-border-radius: 30px;
-          border-radius: 30px;
-  background-color: #fff;
-}
-.navbar .navbar-fixed .navbar-content .navbar-search .navbar-search-icon {
-  font-size: 10px;
-}
-.navbar .navbar-fixed .navbar-content .navbar-search .navbar-search-title {
-  margin-left: 5px;
-  font-size: 14px;
-  width: 100%;
+.tab .tab-gear::after {
+  content: '';
+  position: absolute;
+  top: 12px;
+  bottom: 12px;
+  left: 0;
+  width: 1px;
+  background-color: #ddd;
 }
 
